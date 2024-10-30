@@ -37,6 +37,7 @@ export default function Page() {
             src="/hero-desktop.png"
             width={1000}
             height={760}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className="hidden md:block"
             alt="Screenshots of the dashboard project showing desktop version"
           />
