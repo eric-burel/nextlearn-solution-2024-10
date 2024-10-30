@@ -43,6 +43,9 @@ export default function NavLinks() {
           </Link>
         );
       })}
+      <a className="italic underline" href="/">
+        A hard link for demo purpose
+      </a>
     </>
   );
 }
