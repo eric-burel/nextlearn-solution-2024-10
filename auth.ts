@@ -22,6 +22,7 @@ export const { auth, signIn, signOut } = NextAuth({
   ...authConfig,
   providers: [
     Credentials({
+      // @ts-expect-error Uses weird promise type
       async authorize(credentials) {
         const parsedCredentials = z
           .object({ email: z.string().email(), password: z.string().min(6) })
