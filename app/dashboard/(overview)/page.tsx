@@ -2,7 +2,13 @@ import CardWrapper from "@/app/ui/dashboard/cards";
 import RevenueChart from "@/app/ui/dashboard/revenue-chart";
 import LatestInvoices from "@/app/ui/dashboard/latest-invoices";
 import { lusitana } from "@/app/ui/fonts";
-import { fetchLatestInvoices, fetchCardData } from "@/app/lib/data";
+/*
+import {
+  fetchLatestInvoices,
+  fetchCardData,
+  fetchRevenue,
+} from "@/app/lib/data";
+ */
 import { Suspense } from "react";
 import {
   CardsSkeleton,
@@ -11,10 +17,11 @@ import {
 } from "@/app/ui/skeletons";
 
 export default async function Page() {
-  // async version
-  const results = await Promise.allSettled([fetchLatestInvoices()]);
-  const errors = results.filter((result) => result.status === "rejected");
-  const data = results.filter((result) => result.status === "fulfilled");
+  console.log("FETCHING INVOICES");
+  // example of using Promise.allSettled to fetch data in parallel
+  // const results = await Promise.allSettled([fetchLatestInvoices()]);
+  // const errors = results.filter((result) => result.status === "rejected");
+  // const data = results.filter((result) => result.status === "fulfilled");
 
   return (
     <main>

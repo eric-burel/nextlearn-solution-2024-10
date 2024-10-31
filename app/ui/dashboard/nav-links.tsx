@@ -43,6 +43,7 @@ export default function NavLinks() {
           </Link>
         );
       })}
+      {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
       <a className="italic underline" href="/">
         A hard link for demo purpose
       </a>
